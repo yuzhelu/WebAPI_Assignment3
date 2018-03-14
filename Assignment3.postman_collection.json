@@ -1,0 +1,524 @@
+{
+	"info": {
+		"name": "Assignment3",
+		"_postman_id": "e0d331f3-b025-ab4a-5434-a034965a072b",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User Created",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "4ce8919e-b0af-4fb5-b3a2-5949054ffd6b",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Rain",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "RainTest",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "supersecret",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"signup"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "User Exists",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Rain",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "RainTest",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "supersecret",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"signup"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "sign in USER",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Rain",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "RainTest",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "supersecret",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"login"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Find movie by Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUmFpbiIsInVzZXJuYW1lIjoiUmFpblRlc3QiLCJpYXQiOjE1MjA5MTkyMzcsImV4cCI6MTUyMTAwNTYzN30.hCHazCeI3tLRFiUFuGzBYVQSgAEAbcMz9D8y20slH68"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Rain",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "RainTest",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "supersecret",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUmFpbiIsInVzZXJuYW1lIjoiUmFpblRlc3QiLCJpYXQiOjE1MjA5MTkyMzcsImV4cCI6MTUyMTAwNTYzN30.hCHazCeI3tLRFiUFuGzBYVQSgAEAbcMz9D8y20slH68",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/movies/5aa1d6f5480e93d2b8aaccd4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"movies",
+						"5aa1d6f5480e93d2b8aaccd4"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "movie saved",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"disabled": true
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUmFpbiIsInVzZXJuYW1lIjoiUmFpblRlc3QiLCJpYXQiOjE1MjA5MTkyMzcsImV4cCI6MTUyMTAwNTYzN30.hCHazCeI3tLRFiUFuGzBYVQSgAEAbcMz9D8y20slH68",
+						"disabled": true
+					},
+					{
+						"key": "Title",
+						"value": "test"
+					},
+					{
+						"key": "Genre",
+						"value": "atest"
+					},
+					{
+						"key": "year",
+						"value": "2017",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Rain",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "username",
+							"value": "RainTest",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "supersecret",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUmFpbiIsInVzZXJuYW1lIjoiUmFpblRlc3QiLCJpYXQiOjE1MjA5MTkyMzcsImV4cCI6MTUyMTAwNTYzN30.hCHazCeI3tLRFiUFuGzBYVQSgAEAbcMz9D8y20slH68",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Title",
+							"value": "test",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Year",
+							"value": "1234",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Genre",
+							"value": "Action",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"movies"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "movie updated",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"disabled": true
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUmFpbiIsInVzZXJuYW1lIjoiUmFpblRlc3QiLCJpYXQiOjE1MjA5MTkyMzcsImV4cCI6MTUyMTAwNTYzN30.hCHazCeI3tLRFiUFuGzBYVQSgAEAbcMz9D8y20slH68"
+					},
+					{
+						"key": "Title",
+						"value": "test2222"
+					},
+					{
+						"key": "Genre",
+						"value": "atest",
+						"disabled": true
+					},
+					{
+						"key": "year",
+						"value": "2017",
+						"disabled": true
+					},
+					{
+						"key": "_id",
+						"value": "5aa76a2cbdd9c52aec8f9428",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Rain",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "username",
+							"value": "RainTest",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "supersecret",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUmFpbiIsInVzZXJuYW1lIjoiUmFpblRlc3QiLCJpYXQiOjE1MjA5MTkyMzcsImV4cCI6MTUyMTAwNTYzN30.hCHazCeI3tLRFiUFuGzBYVQSgAEAbcMz9D8y20slH68",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Title",
+							"value": "test",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Year",
+							"value": "1234",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Genre",
+							"value": "Action",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/movies/5aa76a2cbdd9c52aec8f9428",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"movies",
+						"5aa76a2cbdd9c52aec8f9428"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "movie deleted",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"disabled": true
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUmFpbiIsInVzZXJuYW1lIjoiUmFpblRlc3QiLCJpYXQiOjE1MjA5MTkyMzcsImV4cCI6MTUyMTAwNTYzN30.hCHazCeI3tLRFiUFuGzBYVQSgAEAbcMz9D8y20slH68"
+					},
+					{
+						"key": "Title",
+						"value": "test2222",
+						"disabled": true
+					},
+					{
+						"key": "Genre",
+						"value": "atest",
+						"disabled": true
+					},
+					{
+						"key": "year",
+						"value": "2017",
+						"disabled": true
+					},
+					{
+						"key": "_id",
+						"value": "5aa76a2cbdd9c52aec8f9428"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Rain",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "username",
+							"value": "RainTest",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "supersecret",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUmFpbiIsInVzZXJuYW1lIjoiUmFpblRlc3QiLCJpYXQiOjE1MjA5MTkyMzcsImV4cCI6MTUyMTAwNTYzN30.hCHazCeI3tLRFiUFuGzBYVQSgAEAbcMz9D8y20slH68",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Title",
+							"value": "test",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Year",
+							"value": "1234",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Genre",
+							"value": "Action",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/movies/5aa76b05bdd9c52aec8f9429",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"movies",
+						"5aa76b05bdd9c52aec8f9429"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
