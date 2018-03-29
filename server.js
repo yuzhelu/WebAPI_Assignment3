@@ -34,14 +34,8 @@ app.use(function(req,res, next){
 app.use(morgan('dev'));
 
 //connect to our database hosted on mlab
-//mongoose.connect('mongodb://tester:test@ds261838.mlab.com:61838/webapi');
-mongoose.connect(process.env.DB, (err, database) =>{
-    if(err) throw err;
-    console.log("connected to the database.");
-    db = database;
-    console.log("database connected on " + process.env.DB);
+mongoose.connect('mongodb://tester:test@ds261838.mlab.com:61838/webapi');
 
-});
 
 //ROUTES FOR API ===========================================
 
