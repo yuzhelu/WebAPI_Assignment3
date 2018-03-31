@@ -253,6 +253,7 @@ apiRouter.route('/movies/:movie_id')
             res.json(movie);
         });
     })
+/*
     .put(function(req, res){
         Movie.findById(req.params.movie_id, function(err, movie){
             if(err) res.send(err);
@@ -266,6 +267,7 @@ apiRouter.route('/movies/:movie_id')
             });
         });
     })
+    */
     .delete(function(req, res){
         Movie.remove({_id: req.params.movie_id}, function(err, movie){
             if(err) return res.send(err);
